@@ -40,7 +40,7 @@ public class LoginController {
 	@RequestMapping("/logout")
 	public String showLogoutPage(ModelMap model)
 	{
-		model.put("logoutMessage", "logout successfully!!");
+		model.put("logoutMessage", "User logged out successfully!!");
 		return "login";
 	}
 }
