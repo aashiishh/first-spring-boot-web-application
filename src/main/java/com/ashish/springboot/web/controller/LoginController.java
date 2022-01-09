@@ -6,10 +6,12 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.SessionAttributes;
 
 import com.ashish.springboot.web.service.ValidationService;
 
 @Controller
+@SessionAttributes("name")
 public class LoginController {
 
 	@Autowired
@@ -38,9 +40,8 @@ public class LoginController {
 	}
 	
 	@RequestMapping("/logout")
-	public String showLogoutPage(ModelMap model)
+	public String showLogoutPage()
 	{
-		model.put("logoutMessage", "User logged out successfully!!");
-		return "login";
+		return "logout";
 	}
 }

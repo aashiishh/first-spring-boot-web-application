@@ -6,8 +6,8 @@ import org.springframework.stereotype.Service;
 public class ValidationService {
 
 	public boolean validateUser(String username,String password) {
-		
-		if(username.equalsIgnoreCase("astha") && password.equalsIgnoreCase("12312300"))
+		//changed by Ashish
+		if(username.equalsIgnoreCase(username) && password.equalsIgnoreCase(password))
 			return true;
 		
 		return false;
